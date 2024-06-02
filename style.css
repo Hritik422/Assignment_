@@ -1,0 +1,312 @@
+/* Basic styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+}
+
+.text-section {
+    max-width: 50%;
+    font-family: Poppins;
+}
+.text-section h1{
+    font-family: Cormorant SC;
+    color:#FF3147;
+}
+.text-section h2{
+    font-size:60px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: Poppins;
+    background-color: #FF3147;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+/* Styles for the pop-up form */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.popup-form .close-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.popup-form h2 {
+    margin-top: 0;
+}
+.popup-form form {
+    display: flex;
+    flex-direction: column;
+}
+.popup-form label {
+    margin-top: 10px;
+}
+.popup-form input, .popup-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.popup-form input[type="submit"] {
+    background-color: #FF0066;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+}
+.popup-form input[type="submit"]:hover {
+    background-color: #E6005C;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FF0066;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+}
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #FF0066;
+}
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: '✔';
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    font-size: 18px;
+    color: white;
+}
+/* Slider styles */
+.whatwedo{
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+.whatwedo h2{
+    font-size: 50px;
+}
+.whatwedo span{
+    padding: 20px;
+    width: 80%;
+}
+.slider {
+    overflow: hidden;
+    width: 100%; /* adjust this according to your layout */
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    justify-content:space-around;
+    transition: transform 1s ease;
+  }
+  
+  .slider-wrapper div {
+    flex:0 0 33.333%;
+    width: auto;
+    height: 10%;
+    /* adjust this according to your layout */
+  }
+  .slider-wrapper div img{
+    height: 60%;
+    width: 60%;
+  }
+.hover-content {
+    display:none;
+}
+.slider-wrapper div img:hover + .hover-content{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    vertical-align:middle;
+    top: 0;
+    width: 20%;
+    font-size:large;
+    height: 100%;
+    background-color: rgba(255, 0, 102, 0.9);
+    color: white;
+    
+}
+
+.hover-text {
+    position: relative;
+    z-index: 2;
+    padding: 15%;
+    text-align: center;
+    vertical-align:middle;
+}
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #FF0066;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.read-more:hover {
+    background-color: #E6005C;
+    color: white;
+}
+.dots {
+    padding: 10px;
+    
+}
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.active {
+    background-color: #FF0066;
+}
+.headings{
+    text-align: center;
+}
+.why-us-inner{
+    display: flex;
+    padding: 30px;
+    justify-content: space-around;
+}
+.why-us-box{
+    display: flex;
+    flex-direction: column;
+}
+.why-us-box img{
+    height: 60px;
+    width: 60px;
+}
+.projects-main{
+    margin: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-main-inner{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+}
+.projects-main-inner div{
+    width: 100%;
+    height: 100%;
+    background:#F6F6F6 0% 0% no-repeat padding-box;
+    color: black;
+    font-family:Poppins;
+    letter-spacing: 0px;
+    font-size: small;
+}
+.projects-main img{
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.projects-main-inner:hover{
+    cursor: pointer;
+}
+.company-growth{
+    background: #FAFAFA;
+    height: 300px;
+    padding: 50px;
+}
+.growth-cards{
+    padding: 15px;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.growth-cards div{
+    height: 15%;
+    font-family: Poppins;
+    width: 20%;
+    background:#FFFFFF;
+    text-transform: uppercase;
+}
+.growth-cards div:hover{
+    animation:glow 10000ms infinite; 
+}
+    @keyframes glow {
+    0% {  box-shadow: 0 0 3px grey }
+    50% {  box-shadow: 0 0 40px grey }
+    100% {  box-shadow: 0 0 3px grey }
+}
+.client-feedback{
+    padding: 20px;
+}
+.client-feedback p{
+    font-style: nomal;
+    font-variant: normal;
+    font-family: Poppins;
+    margin: auto;
+    padding-top: 30px;
+    width: 40%;
+    text-align: center;
+}
+footer {
+    margin-top: 40px;
+    height: 300px;
+    background: #FF3147;
+    text-align: center;
+    line-height: 300px;
+    }
+    
+footer img {
+    vertical-align: middle;
+}
+
+
+
